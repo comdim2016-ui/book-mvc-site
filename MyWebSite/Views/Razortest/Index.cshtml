@@ -1,0 +1,37 @@
+﻿@model MyWebSite.ViewModel.Person
+
+
+    <h1>Hello</h1>
+    <p>This is a view</p>
+    <p>First Name: @("Mr. " + Model.FirstName)</p>
+    <p>Last Name: @Model.LastName</p>
+    <p>Age: @Model.Age</p>
+
+@{
+    int i = 10;
+    @*
+    <p>index = @i</p>
+    <text>index = @i</text>
+    @: index = @i
+    *@
+}
+@if (Model.Age < 15)
+    {
+        <p>что-то одно</p>
+    }
+else
+{
+    <p>отлично</p>
+    <pre>int index = 10;</pre>
+    <p>index = @i</p>
+}
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/scripts/cart.js"></script>
+}
+
+@section Head
+{
+    <p>Этот текст отрисован в секции из представления</p>
+}

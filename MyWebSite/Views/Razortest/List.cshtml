@@ -1,0 +1,37 @@
+﻿@model MyWebSite.ViewModel.Person[]
+
+
+<ul>
+    @foreach (var p in Model)
+    {
+        @await Html.PartialAsync("_Item", p)
+        ;
+    }
+
+    @await Html.PartialAsync("_Item",
+        new MyWebSite.ViewModel.Person()
+        {
+            FirstName = "Дмитрий",
+            LastName = "Комаров",
+            Age = 23
+        })
+    @{
+        await Html.RenderPartialAsync("_Item", new MyWebSite.ViewModel.Person()
+        {
+            FirstName = "Дмитрий",
+            LastName = "Комаров",
+            Age = 23
+        });
+    }
+</ul>
+
+@*
+@{
+    var result = Html.RenderPartialAsync("_Item", new MyWebSite.ViewModel.Person()
+    {
+        FirstName = "Дмитрий",
+        LastName = "Комаров"
+    });
+}
+@result;
+*@

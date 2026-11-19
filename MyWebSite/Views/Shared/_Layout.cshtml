@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+<header>
+    <span class="menu">
+        <a href="/Razortest/Index">Razer</a>
+        <a href="/Razortest/List">Списки</a>
+        <a href="/Login/Index">Формы</a>
+    </span>
+</header>
+<body>
+    <div style="background:#eee; font-size:200%; padding: 30px">
+        Logo
+        @RenderSection("Head", required: false)
+    </div>
+    <div>
+        @RenderBody()
+        @await Component.InvokeAsync("User")
+        @*<vc:user></vc:user>*@
+    </div>
+    <div style="background:#eee; padding: 30px">
+        Copyright: что-нибудь
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

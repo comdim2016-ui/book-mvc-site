@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MyWebSite.Engine/MyWebSite.Engine.csproj" Id="8df506eb-3f19-4565-977d-111b22a5d97b" />
+  <Project Path="MyWebSite/MyWebSite.csproj" />
+</Solution>
